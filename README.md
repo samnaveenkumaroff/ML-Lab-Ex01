@@ -27,13 +27,15 @@ patterns, to spot anomalies, to test hypothesis and to check assumptions with th
 summary statistics and graphical representations.
 Prior to develop any Machine Learning (ML) model, it is a good practice to understand the
 data first and try to gather as many insights from it.
+
 1) Outlier analysis – process of identifying extreme values, or abnormal observations
  Mean value is less than median value 
  Large difference between 75th %tile and max values of predictors
  Z-score is &amp;gt;3
  IQR - minimum and maximum point Q1–1.5*IQR and Q3+1.5*IQR respectively
  Box plot
-2) Correlation analysis - measure the strength of the linear relationship between two
+
+3) Correlation analysis - measure the strength of the linear relationship between two
 variables and compute their association
  It’s a good practice to remove correlated variables during feature selection(which less
 contributes with the target variable), to improve the model
@@ -41,6 +43,7 @@ contributes with the target variable), to improve the model
  If correlation is zero, there is no linear relationship between these two variables, so it is
 safe to drop these features
  Pearson correlation coefficient or Spearman correlation coefficient
+
 3) Univariate, Bivariate and Multivariate analysis
  Univariate - analyzing only one variable.
  Bivariate - comparing two variables to study their relationships.
