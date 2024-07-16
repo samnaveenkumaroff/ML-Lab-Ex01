@@ -92,3 +92,5 @@ features with right skew, left skew and no skew (Python code)
 using categorical plot
 15. Display the counts of observations for categorical variable using count plot
 16. Perform a multivariate analysis between features using pair plot
+---
+Crafted With Love By Sam Naveenkumar .V
