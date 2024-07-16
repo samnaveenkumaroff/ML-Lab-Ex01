@@ -66,6 +66,7 @@ Bivariate Analysis of Categorical Variables:
  Count plot - show the counts of observations in each categorical bin using bars
 Multivariate Analysis
  Pair plot - to see how two continuous features behave for different classes
+
 ---
 # QUESTIONS
 1. Read the data
