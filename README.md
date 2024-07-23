@@ -1,96 +1,94 @@
 # ML-Lab-Ex01
----
-# AIM
-To perform the initial investigations and analysis on the given dataset &amp; summarize the
-characteristics of the given dataset using python implementation.
 
----
-# DESCRIPTION
-Exploratory Data Analysis refers to the critical process of performing initial
-investigations on data so as to discover patterns to spot anomalies to test hypothesis and
-to check assumptions with the help of summary statistics and graphical representations.
-Python libraries use in machine learning:
- Numpy
- Scipy
- Scikit-learn
- Pandas
- Matplotlib
- Theano
- TensorFlow
- Keras
- PyTorch
+```markdown
+Welcome to the ML-Lab-Ex01 repository! This repository contains the code and resources for various machine learning exercises, focusing on data preprocessing and exploratory data analysis.
 
----
-# EXPLORATORY DATA ANALYSIS (EDA)
-EDA refers to the process of performing initial investigations on data so as to discover
-patterns, to spot anomalies, to test hypothesis and to check assumptions with the help of
-summary statistics and graphical representations.
-Prior to develop any Machine Learning (ML) model, it is a good practice to understand the
-data first and try to gather as many insights from it.
+## Ex. No: 1a EXPLORATORY DATA ANALYSIS
 
-1) Outlier analysis – process of identifying extreme values, or abnormal observations
- Mean value is less than median value 
- Large difference between 75th %tile and max values of predictors
- Z-score is &amp;gt;3
- IQR - minimum and maximum point Q1–1.5*IQR and Q3+1.5*IQR respectively
- Box plot
+### AIM
+To perform the initial investigations and analysis on the given dataset & summarize the characteristics of the given dataset using Python implementation.
 
-3) Correlation analysis - measure the strength of the linear relationship between two
-variables and compute their association
- It’s a good practice to remove correlated variables during feature selection(which less
-contributes with the target variable), to improve the model
+### DESCRIPTION
+Exploratory Data Analysis (EDA) refers to the critical process of performing initial investigations on data to discover patterns, spot anomalies, test hypotheses, and check assumptions with the help of summary statistics and graphical representations.
 
- If correlation is zero, there is no linear relationship between these two variables, so it is
-safe to drop these features
- Pearson correlation coefficient or Spearman correlation coefficient
+Python libraries used in machine learning:
+- Numpy
+- Scipy
+- Scikit-learn
+- Pandas
+- Matplotlib
+- Theano
+- TensorFlow
+- Keras
+- PyTorch
 
-3) Univariate, Bivariate and Multivariate analysis
- Univariate - analyzing only one variable.
- Bivariate - comparing two variables to study their relationships.
- Multivariate - comparing more than two variables and study their relationships
-Univariate analysis:
-Describe patterns found in univariate data include central tendency (mean, mode and median)
-and dispersion: range, variance, maximum, minimum, quartiles (including the interquartile
-range), and standard deviation.
-Categorical data:
- Bar plot - rectangular bars with heights proportional to the values that they represent
- Pie plot - circular statistical graphic, which is divided into slices to illustrate numerical
-proportion
-Continuous data:
- Scatter plot - distribution of the observations
- Swarm plot - view the spread of values in a continuous variable
- Histogram plot - group the data into bins
- Violin plot - distribution of quantitative data across several levels (different category)
-Bivariate Analysis of Continuous Variables:
- Scatter plot, Correlation - Heat map
-Bivariate Analysis of Continuous Variables and Categorical Variables:
- Categorical plot – bar, box
-Bivariate Analysis of Categorical Variables:
- Count plot - show the counts of observations in each categorical bin using bars
-Multivariate Analysis
- Pair plot - to see how two continuous features behave for different classes
+### EXPLORATORY DATA ANALYSIS (EDA)
+EDA involves initial investigations on data to discover patterns, spot anomalies, test hypotheses, and check assumptions with the help of summary statistics and graphical representations.
 
----
-# QUESTIONS
+#### 1. Outlier Analysis
+- **Mean value is less than median value** 
+- **Large difference between 75th percentile and max values of predictors**
+- **Z-score > 3**
+- **IQR** - minimum and maximum point Q1–1.5*IQR and Q3+1.5*IQR respectively
+- **Box plot**
+
+#### 2. Correlation Analysis
+- **Remove correlated variables** during feature selection to improve the model.
+- **Zero correlation** indicates no linear relationship between variables, making it safe to drop these features.
+- **Pearson correlation coefficient** or **Spearman correlation coefficient**
+
+#### 3. Univariate, Bivariate, and Multivariate Analysis
+- **Univariate** - analyzing only one variable.
+- **Bivariate** - comparing two variables to study their relationships.
+- **Multivariate** - comparing more than two variables to study their relationships.
+
+### QUESTIONS
 1. Read the data
 2. Display the first and last 5 rows
 3. Display the number of rows and columns
 4. Display the number of categorical and numerical columns
-
-5. For numerical columns, display the min, max and mode
+5. For numerical columns, display the min, max, and mode
 6. Display the columns with null values
 7. Calculate the 5 number summary and correlate with box plot (Python code)
 8. Display the outlier values using Z-score (Python code)
-9. Display the features with high positive correlation, high negative correlation and no
-correlation (Python code)
-10. Analyze the skewness of the features using plot distribution graph and display the
-features with right skew, left skew and no skew (Python code)
+9. Display the features with high positive correlation, high negative correlation, and no correlation (Python code)
+10. Analyze the skewness of the features using plot distribution graph and display the features with right skew, left skew, and no skew (Python code)
 11. Perform univariate analysis for categorical variables using bar plot
 12. Perform univariate analysis for continuous variables using swarm plot and violin plot
-13. Display the scatter plat to show the relationship between two continuous variables
-14. Perform a bivariate analysis between continuous variable and categorical variable
-using categorical plot
+13. Display the scatter plot to show the relationship between two continuous variables
+14. Perform a bivariate analysis between continuous variable and categorical variable using categorical plot
 15. Display the counts of observations for categorical variable using count plot
 16. Perform a multivariate analysis between features using pair plot
----
-Crafted With Love By Sam Naveenkumar .V
+
+## Contents
+
+- [ML_Lab_01.ipynb](ML_Lab_01.ipynb): Jupyter notebook for the exercises.
+- [ML_Lab_01.py](ML_Lab_01.py): Python script for the exercises.
+- [insurance.csv](insurance.csv): Dataset used for the exercises.
+
+## Usage
+
+Clone the repository and run the Jupyter notebook or Python script to perform the machine learning exercises. Make sure to have the required dataset (insurance.csv) in the same directory or update the path accordingly.
+
+### Example
+
+```python
+# Load the dataset
+import pandas as pd
+df = pd.read_csv('insurance.csv')
+
+# Perform Min-Max Normalization
+from sklearn.preprocessing import MinMaxScaler
+def min_max_normalization(df, column_name):
+    scaler = MinMaxScaler()
+    df[[column_name]] = scaler.fit_transform(df[[column_name]])
+    return df
+
+df = min_max_normalization(df, 'bmi')
+print(df['bmi'])
+```
+
+## Crafted with Love by Sam Naveenkumar .V
+
+Thank you for visiting the ML-Lab-Ex01 repository. If you have any questions or suggestions, please feel free to raise an issue or contribute to the project.
+```
